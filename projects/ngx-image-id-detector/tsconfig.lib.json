@@ -1,0 +1,26 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../out-tsc/lib",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "types": [],
+    "skipLibCheck": true,
+    "lib": [
+      "dom",
+      "es2020"
+    ],
+    "paths": {
+      "ngx-image-id-detector": [
+        "projects/ngx-image-id-detector/src/public-api.ts"
+      ]
+    }
+  },
+  "exclude": [
+    "src/test.ts",
+    "**/*.spec.ts"
+  ]
+}

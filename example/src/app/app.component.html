@@ -1,0 +1,167 @@
+<div style="padding: 2rem; max-width: 700px; margin: auto; font-family: Arial, sans-serif;">
+  <h2 style="margin-bottom: 1rem;">Tải lên giấy tờ tuỳ thân</h2>
+
+  <ul style="margin-bottom: 2rem;">
+    <li>✅ Phải là giấy tờ tuỳ thân do chính phủ cấp còn hiệu lực.</li>
+    <li>✅ Ảnh màu, chữ rõ ràng, dễ đọc.</li>
+    <li>✅ Dung lượng từ 10KB - 4MB, định dạng JPG, JPEG hoặc PNG.</li>
+    <li>❌ Không dùng ảnh chụp màn hình, ảnh selfie hoặc bản photo.</li>
+  </ul>
+
+  <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+    <div
+      style="display: flex; justify-content: space-around; text-align: center; gap: 2rem; flex-wrap: wrap; padding: 1rem;">
+
+      <div>
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="#4CAF50" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+        </svg>
+        <div style="margin-top: 0.5rem;">
+          <strong>Đạt</strong><br />
+          <small>Ảnh rõ nét, không lóa, không bị cắt</small>
+        </div>
+      </div>
+
+      <div>
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="#F44336" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 
+               12 13.41 17.59 19 19 17.59 13.41 12z" />
+        </svg>
+        <div style="margin-top: 0.5rem;">
+          <strong>Bị cắt</strong><br />
+          <small>Ảnh bị cắt mất thông tin</small>
+        </div>
+      </div>
+
+      <div>
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="#F44336" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 
+               12 13.41 17.59 19 19 17.59 13.41 12z" />
+        </svg>
+        <div style="margin-top: 0.5rem;">
+          <strong>Bị lóa</strong><br />
+          <small>Ảnh bị chói sáng, khó đọc</small>
+        </div>
+      </div>
+
+      <div>
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="#F44336" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 
+               12 13.41 17.59 19 19 17.59 13.41 12z" />
+        </svg>
+        <div style="margin-top: 0.5rem;">
+          <strong>Mờ</strong><br />
+          <small>Ảnh bị mờ, không rõ chữ</small>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div style="display: flex; gap: 2rem; justify-content: center;">
+    <!-- Front -->
+    <div style="flex: 1; border: 2px dashed #ccc; padding: 1rem; text-align: center;">
+      <h4>Mặt trước giấy tờ</h4>
+      <input #frontFile type="file" accept="image/*" (change)="onFrontFileSelected($event)" id="frontFileInput"
+        hidden />
+      <button type="button" (click)="frontFile.click()" style="
+      width: 100%;
+      background: #fff;
+      color: #2196F3;
+      border: 2px solid #2196F3;
+      border-radius: 6px;
+      padding: 0.7rem 0;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 1rem;
+      transition: background 0.2s, color 0.2s;
+    " onmouseover="this.style.background='#2196F3';this.style.color='#fff'"
+        onmouseout="this.style.background='#fff';this.style.color='#2196F3'">Chọn ảnh từ thiết bị</button>
+      <div *ngIf="frontImage" style="margin: 1rem 0;">
+        <img [src]="frontImage" alt="Ảnh mặt trước"
+          style="max-width: 100%; max-height: 180px; border-radius: 8px; border: 1px solid #eee;" />
+      </div>
+      <button (click)="takePhoto('front')" style="
+    margin-top: 1.5rem; 
+    width: 100%; 
+    background: linear-gradient(90deg, #4CAF50 0%, #2196F3 100%);
+    color: #fff; 
+    border: none; 
+    border-radius: 6px; 
+    padding: 0.75rem 0; 
+    font-size: 1rem; 
+    font-weight: bold; 
+    cursor: pointer; 
+    box-shadow: 0 2px 8px rgba(76,175,80,0.08);
+    transition: background 0.2s;
+  " onmouseover="this.style.background='linear-gradient(90deg, #388E3C 0%, #1976D2 100%)'"
+        onmouseout="this.style.background='linear-gradient(90deg, #4CAF50 0%, #2196F3 100%)'">📷 Chụp ảnh bằng
+        webcam</button>
+    </div>
+
+    <!-- Back -->
+    <div style="flex: 1; border: 2px dashed #ccc; padding: 1rem; text-align: center;">
+      <h4>Mặt sau giấy tờ</h4>
+      <input #backFile hidden type="file" accept="image/*" (change)="onBackFileSelected($event)" id="backFileInput" />
+      <button type="button" (click)="backFile.click()" style="
+      width: 100%;
+      background: #fff;
+      color: #2196F3;
+      border: 2px solid #2196F3;
+      border-radius: 6px;
+      padding: 0.7rem 0;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 1rem;
+      transition: background 0.2s, color 0.2s;
+    " onmouseover="this.style.background='#2196F3';this.style.color='#fff'"
+        onmouseout="this.style.background='#fff';this.style.color='#2196F3'">Chọn ảnh từ thiết bị</button>
+      <div *ngIf="backImage" style="margin: 1rem 0;">
+        <img [src]="backImage" alt="Ảnh mặt sau"
+          style="max-width: 100%; max-height: 180px; border-radius: 8px; border: 1px solid #eee;" />
+      </div>
+      <button (click)="takePhoto('back')" style="
+    margin-top: 1.5rem; 
+    width: 100%; 
+    background: linear-gradient(90deg, #4CAF50 0%, #2196F3 100%);
+    color: #fff; 
+    border: none; 
+    border-radius: 6px; 
+    padding: 0.75rem 0; 
+    font-size: 1rem; 
+    font-weight: bold; 
+    cursor: pointer; 
+    box-shadow: 0 2px 8px rgba(76,175,80,0.08);
+    transition: background 0.2s;
+  " onmouseover="this.style.background='linear-gradient(90deg, #388E3C 0%, #1976D2 100%)'"
+        onmouseout="this.style.background='linear-gradient(90deg, #4CAF50 0%, #2196F3 100%)'">📷 Chụp ảnh bằng
+        webcam</button>
+    </div>
+  </div>
+
+  <div *ngIf="loading" style="margin-top: 1rem;">🔍 Đang xử lý ảnh...</div>
+  <div *ngIf="error" style="color: red; margin-top: 1rem;">❌ {{ error }}</div>
+
+  <div *ngIf="frontResult || backResult" style="margin-top: 2rem;">
+    <h3>Kết quả OCR:</h3>
+    <div *ngIf="frontResult">
+      <h4>📄 Mặt trước:</h4>
+      <p><strong>Mặt:</strong> {{ frontResult.side }}</p>
+      <pre
+        style="background: #f1f1f1; padding: 1rem; white-space: pre-wrap; word-break: break-word;">{{ frontResult.text }}</pre>
+    </div>
+    <div *ngIf="backResult">
+      <h4>📄 Mặt sau:</h4>
+      <p><strong>Mặt:</strong> {{ backResult.side }}</p>
+      <pre
+        style="background: #f1f1f1; padding: 1rem; white-space: pre-wrap; word-break: break-word;">{{ backResult.text }}</pre>
+    </div>
+  </div>
+
+  <div style="margin-top: 2rem; text-align: right;">
+    <button [disabled]="!frontResult || !backResult" (click)="submit()">Xong</button>
+  </div>
+</div>

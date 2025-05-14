@@ -1,27 +1,18 @@
-# NgxImageIdDetector
+# 📷 ngx-image-id-detector
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
+**ngx-image-id-detector** là một thư viện Angular dùng để phát hiện xem một hình ảnh có phải là ảnh CCCD (Căn cước công dân Việt Nam) hay không, bằng cách sử dụng OCR (`Tesseract.js`). Phân biệt được mặt trước, mặt sau, hoặc không nhận diện được.
 
-## Development server
+## ✨ Tính năng
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- ✅ Nhận diện mặt **trước** CCCD
+- ✅ Nhận diện mặt **sau** CCCD
+- ❌ Phân biệt ảnh không hợp lệ (mờ, lóa, cắt, không phải CCCD)
+- 🔠 Hỗ trợ tiếng Việt bằng Tesseract.js (`lang: vie`)
+- 🔁 Trả kết quả dạng Observable phù hợp với Angular
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 📦 Cài đặt
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+npm install ngx-image-id-detector tesseract.js
