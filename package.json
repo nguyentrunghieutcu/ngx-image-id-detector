@@ -1,0 +1,31 @@
+{
+  "name": "ngx-image-id-detector",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^13.2.0",
+    "@angular/core": "^13.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "module": "fesm2015/ngx-image-id-detector.mjs",
+  "es2020": "fesm2020/ngx-image-id-detector.mjs",
+  "esm2020": "esm2020/ngx-image-id-detector.mjs",
+  "fesm2020": "fesm2020/ngx-image-id-detector.mjs",
+  "fesm2015": "fesm2015/ngx-image-id-detector.mjs",
+  "typings": "ngx-image-id-detector.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./ngx-image-id-detector.d.ts",
+      "esm2020": "./esm2020/ngx-image-id-detector.mjs",
+      "es2020": "./fesm2020/ngx-image-id-detector.mjs",
+      "es2015": "./fesm2015/ngx-image-id-detector.mjs",
+      "node": "./fesm2015/ngx-image-id-detector.mjs",
+      "default": "./fesm2020/ngx-image-id-detector.mjs"
+    }
+  },
+  "sideEffects": false
+}
