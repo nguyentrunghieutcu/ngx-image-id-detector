@@ -1,24 +1,30 @@
-# NgxImageIdDetector
+# 📷 ngx-image-id-detector
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
+**ngx-image-id-detector** is an Angular library for detecting whether an image is a Vietnamese Citizen ID card (CCCD) using OCR (`Tesseract.js`). It can distinguish between the front side, back side, or unrecognized images.
 
-## Code scaffolding
+## ✨ Features
 
-Run `ng generate component component-name --project ngx-image-id-detector` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-image-id-detector`.
-> Note: Don't forget to add `--project ngx-image-id-detector` or else it will be added to the default project in your `angular.json` file. 
+- ✅ Detects the **front** side of CCCD
+- ✅ Detects the **back** side of CCCD
+- ❌ Distinguishes invalid images (blurred, glare, cropped, not CCCD)
+- 🔠 Supports Vietnamese language with Tesseract.js (`lang: vie`)
+- 🔁 Returns results as Observable, suitable for Angular
 
-## Build
+---
 
-Run `ng build ngx-image-id-detector` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 📦 Installation
 
-## Publishing
+```bash
+npm install ngx-image-id-detector tesseract.js
+```
 
-After building your library with `ng build ngx-image-id-detector`, go to the dist folder `cd dist/ngx-image-id-detector` and run `npm publish`.
+---
 
-## Running unit tests
+## 📋 Version Compatibility
 
-Run `ng test ngx-image-id-detector` to execute the unit tests via [Karma](https://karma-runner.github.io).
+| ngx-image-id-detector | Angular version | Tesseract.js version |
+|----------------------|-----------------|----------------------|
+| 1.x                  | 16+             | 4.x                  |
+| 0.x                  | 13–15           | 2.x                  |
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+--- 

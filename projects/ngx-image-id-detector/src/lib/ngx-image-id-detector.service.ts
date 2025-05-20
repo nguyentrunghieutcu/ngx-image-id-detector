@@ -15,7 +15,6 @@ export interface DetectIdOptions {
   whitelist?: string;
   logger?: (msg: any) => void;
 }
-
 @Injectable({
   providedIn: 'root'
 })
@@ -26,20 +25,23 @@ export class DetectIdService {
       'CONGHAXHICHNGHAVITNAM',
       'CNGHAXHICHNGHAVIETNAM',
       'CONGHOAXAHOICHUNGHIAVIETNAM',
-      'DOCLAPTUDOHANHPHUC',
-      'HOVATENEULLNAME'
+      'ĐOCLAPTUDOHANHPHUC',
+      'HOVATENEULLNAME',
+      'DENTITYCARD'
     ]],
     ['back', [
-      'DACDIEMNHANDANGPERSONALIDENTIFICATION',
+      'ĐACĐIEMNHANDANGPERSONALIDENTIICATION',
       'CUCTRUONGCUCCANHSAT',
       'DANGPERSONALIDENTILICATION',
       'CUCCANHSAT',
       'NGONTROTRAI',
       'NGONTROPHAI',
       'CCTRUNGCCCNH',
-      'QUNLHNHCHNHVETRATTUXAHDHU',
+      'QUNLHNHCHNHVETRATTUXAHĐHU',
       'THEPOLICEDEPARTMENT',
-      'NHANDANGPERSONALIDENTILICATI'
+      'NHANDANGPERSONALIDENTILICATI',
+      'BOGONGANIUISRYOEPUBLICSECURITY',
+      'SINHPACEOBIRIH'
     ]]
   ]);
 
@@ -57,9 +59,9 @@ export class DetectIdService {
     const {
       language = 'vie',
       whitelist = 'AĂÂBCDĐEÊGHIKLMNOÔƠPQRSTUƯVXYZaăâbcdđeêghiklmnoôơpqrstuưvxyz' +
-                  'ÀÁẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶĐÈÉẺẼẸÊẾỀỂỄỆÌÍỈĨỊÒÓỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÙÚỦŨỤƯỨỪỬỮỰ' +
-                  'àáảãạâấầẩẫậăắằẳẵặđèéẻẽẹêếềểễệìíỉĩịòóỏõọôốồổỗộơớờởỡợùúủũụưứừửữự' +
-                  'ÝỲỶỸỴýỳỷỹỵ',
+      'ÀÁẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶĐÈÉẺẼẸÊẾỀỂỄỆÌÍỈĨỊÒÓỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÙÚỦŨỤƯỨỪỬỮỰ' +
+      'àáảãạâấầẩẫậăắằẳẵặđèéẻẽẹêếềểễệìíỉĩịòóỏõọôốồổỗộơớờởỡợùúủũụưứừửữự' +
+      'ÝỲỶỸỴýỳỷỹỵ',
       logger
     } = options || {};
 
