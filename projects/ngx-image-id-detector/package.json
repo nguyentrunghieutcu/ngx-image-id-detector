@@ -1,6 +1,22 @@
 {
   "name": "ngx-image-id-detector",
-  "version": "0.0.1",
+  "version": "1.1.0",
+  "license": "MIT",
+  "author": {
+    "name": "Hieu hoc code"
+  },
+  "description": "A package that detects if an image is a Vietnamese citizen ID using Tesseract.js",
+  "keywords": [
+    "tesseract",
+    "ocr",
+    "image-detection",
+    "cccd",
+    "vietnam-id",
+    "identity-card",
+    "angular",
+    "ngx",
+    "tesseract.js"
+  ],
   "peerDependencies": {
     "@angular/common": "^13.2.0",
     "@angular/core": "^13.2.0"
